@@ -3,12 +3,12 @@ class User{
     private $conn;
     private $table_name = "Users";
 
-    public $user_name;
-    public $name;
-    public $email;
-    public $password;
-    public $start_date;
-    public $employee_id;
+    public $Username;
+    public $Name;
+    public $Email;
+    public $Password;
+    public $StartDate;
+    public $EmployeeID;
 
     public function __construct($db){
         $this->conn = $db;
