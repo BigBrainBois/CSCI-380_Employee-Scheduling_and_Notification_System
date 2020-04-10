@@ -63,6 +63,29 @@ class User{
         return false;
 
     }
+
+    function authenticate(){
+        
+        //creating querry
+        $query = "SELECT Password FROM " . $this->table_name . " WHERE Username = :Username";
+        
+        $stmt= $this->conn->prepare($query);
+
+        //cleaning inputs
+        $this->Username = htmlspecialchars(strip_tags($this->Username));
+        $this->Password = htmlspecialchars(strip_tags($this->Password));
+        
+        //binding parameters
+        $stmt->bindParam(":Username",$this->Username);
+
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        //checking password against hash
+        return password_verify($this->Password,$row["Password"]);
+
+    }
     
 }
 ?>
