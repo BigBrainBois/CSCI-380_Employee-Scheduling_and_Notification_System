@@ -17,11 +17,11 @@ class User{
     function read(){
 
         //creating querry
-        $querry = "SELECT Username, Name, StartDate, EmployeeID 
+        $query = "SELECT Username, Name, StartDate, EmployeeID 
         FROM " . $this->table_name . "";
 
         //preparing querry
-        $stmt = $this->conn->prepare($querry);
+        $stmt = $this->conn->prepare($query);
 
         //executing querry
         $stmt->execute();
@@ -31,12 +31,12 @@ class User{
 
     function create(){
         //creating insert querry
-        $querry = "INSERT INTO " . $this->table_name . "
+        $query = "INSERT INTO " . $this->table_name . "
         SET Username=:Username, Name=:Name, Email=:Email, Password=:Password, 
         StartDate=:StartDate, EmployeeID=:EmployeeID";
 
         //preparing querry
-        $stmt = $this->conn->prepar($querry);
+        $stmt = $this->conn->prepare($query);
 
         //cleaning data
         $this->Username = htmlspecialchars(strip_tags($this->Username));
@@ -50,7 +50,7 @@ class User{
 
         //binding data to querry
         $stmt->bindParam(":Username",$this->Username);
-        $stmt->bindParam(":Name",$this->name);
+        $stmt->bindParam(":Name",$this->Name);
         $stmt->bindParam(":Email",$this->Email);
         $stmt->bindParam(":Password",$this->Password);
         $stmt->bindParam(":EmployeeID",$this->EmployeeID);

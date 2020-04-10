@@ -19,24 +19,35 @@ $user = new User($db);
 $data = json_decode(file_get_contents("php://input"));
 
 //checking if input is empty
-if(!empty($data->Username) &&
+if(
+   !empty($data->Username) &&
    !empty($data->Name) &&
    !empty($data->Email) &&
    !empty($data->Password) &&
-   !empty($data->EmployeeID))
+   !empty($data->EmployeeID)
 ){
     //setting user attributes
     $user->Username = $data->Username;
     $user->Name = $data->Name;
     $user->Email = $data->Email;
-    $user->Password = $data->Password
+    $user->Password = $data->Password;
     $user->EmployeeID = $data->EmployeeID;
-    $user->Date = date("Y-m-d");
+    $user->StartDate = date("Y-m-d");
 
     if($user->create()){
+        http_response_code(200);
+        echo json_encode(array("message"=> "Successfully added user to database!"));
+    }
+    else{
+        http_response_code(503);
+        echo json_encode(array("message"=> "Unable to create a new user."));
         
     }
     
+}
+else{
+    http_response_code(400);
+    echo json_encode(array("message"=> "Failed to create a new user. The data input was incomplete."));
 }
 
 ?>
