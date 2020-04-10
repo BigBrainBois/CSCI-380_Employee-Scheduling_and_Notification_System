@@ -33,7 +33,6 @@ $user = new User($db);
          $user_item=array(
              "Username" => $Username,
              "Name" => $Name,
-             "Email" => $Email,
              "StartDate" => $StartDate,
              "EmployeeID" => $EmployeeID
          );
