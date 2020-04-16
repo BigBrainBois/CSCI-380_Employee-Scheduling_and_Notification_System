@@ -9,11 +9,15 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 //include database and user class
 include_once "../config/database.php";
 include_once "../objects/user.php";
+include_once "../config/auth.php";
 
 //creating database connection and user object
 $database = new Database();
 $db = $database->getConnection();
 $user = new User($db);
+
+//creating auth object
+$auth = new Auth();
 
 //getting posted data
 $data = json_decode(file_get_contents("php://input"));
@@ -25,9 +29,18 @@ if(
     $user->Username = $data->Username;
     $user->Password = $data->Password;
     
+    //authenticating
     if($user->authenticate()){
+
         http_response_code(200);
-        echo json_encode(array("message"=> "Sign-in was successfull!"));
+
+        //generating jwt token
+        $jwt = $auth->generateToken($data->Username);
+
+        echo json_encode(array(
+            "message"=> "Sign-in was successfull!",
+            "jwt" => $jwt
+        ));
     }
     else{
         http_response_code(401);
