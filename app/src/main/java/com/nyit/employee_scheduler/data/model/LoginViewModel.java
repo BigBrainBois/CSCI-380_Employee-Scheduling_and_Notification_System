@@ -1,16 +1,16 @@
-package com.example.myapplication.data.model;
+package com.nyit.employee_scheduler.data.model;
 
 import android.util.Patterns;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.myapplication.R;
-import com.example.myapplication.data.LoginRepository;
-import com.example.myapplication.data.Result;
-import com.example.myapplication.ui.login.LoggedInUserView;
-import com.example.myapplication.ui.login.LoginFormState;
-import com.example.myapplication.ui.login.LoginResult;
+import com.nyit.employee_scheduler.R;
+import com.nyit.employee_scheduler.data.LoginRepository;
+import com.nyit.employee_scheduler.data.Result;
+import com.nyit.employee_scheduler.ui.login.LoggedInUserView;
+import com.nyit.employee_scheduler.ui.login.LoginFormState;
+import com.nyit.employee_scheduler.ui.login.LoginResult;
 
 public class LoginViewModel extends ViewModel {
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
