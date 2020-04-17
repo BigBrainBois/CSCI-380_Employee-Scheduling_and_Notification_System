@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +9,10 @@
     <LinearLayout
         android:id="@+id/dashLLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="737dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:id="@+id/dashRLayout"
@@ -21,34 +24,115 @@
                 android:id="@+id/dashText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="25dp"
                 android:text="@string/my_dashboard"
-                android:textSize="24sp"
                 android:textColor="@color/white"
-                android:layout_margin="25dp"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_marginLeft="25dp"
                 android:layout_marginStart="25dp"
-                android:textSize="16sp"
-                android:text="@string/user123" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="55dp"
+                android:text="@string/user123"
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/loginicon"
-                app:srcCompat="@drawable/employee_icon"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginStart="325dp"
                 android:layout_marginLeft="325dp"
+                android:layout_marginTop="25dp"
                 android:contentDescription="@string/icon"
-                android:layout_marginStart="325dp" />
+                app:srcCompat="@drawable/manager_icon" />
         </RelativeLayout>
 
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:columnCount="2"
+            app:rowCount="2">
 
+
+            <!--View Schedule Card-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/schedule"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_margin="50dp">
+
+                <ImageView
+                    android:id="@+id/scheduleicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/icon"
+                    app:srcCompat="@drawable/scheduleview" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--Requests Card-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/requests"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_margin="50dp">
+
+                <ImageView
+                    android:id="@+id/requesticon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/icon"
+                    app:srcCompat="@drawable/request" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--Notification Card-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/notification"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_margin="50dp">
+
+                <ImageView
+                    android:id="@+id/notificationicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/icon"
+                    app:srcCompat="@drawable/notification" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--Messaging Card-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/messaging"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_margin="50dp">
+
+                <ImageView
+                    android:id="@+id/messagingicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/icon"
+                    app:srcCompat="@drawable/messaging" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.gridlayout.widget.GridLayout>
 
 
     </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nyit.employee_scheduler.R;
+import com.nyit.employee_scheduler.dashboard;
 import com.nyit.employee_scheduler.ui.login.LoginViewModel;
 import com.nyit.employee_scheduler.ui.login.LoginViewModelFactory;
 
@@ -115,6 +117,11 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+
+
+//                Go to next activity after authentication
+//                Intent authenticate = new Intent(this, dashboard.class);
+//                startActivity(authenticate);
             }
         });
     }
