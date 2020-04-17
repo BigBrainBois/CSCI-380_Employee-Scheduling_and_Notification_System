@@ -16,4 +16,6 @@
     <string name="manager_button">manager</string>
     <string name="employee_button">employee</string>
     <string name="manager_or_employee">Are you a...</string>
+    <string name="my_dashboard">My Dashboard</string>
+    <string name="user123">user123</string>
 </resources>

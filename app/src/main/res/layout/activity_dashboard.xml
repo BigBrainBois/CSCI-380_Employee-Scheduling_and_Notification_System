@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard">
+
+    <LinearLayout
+        android:id="@+id/dashLLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/dashRLayout"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@drawable/background">
+
+            <TextView
+                android:id="@+id/dashText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_dashboard"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:layout_margin="25dp"/>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:textSize="16sp"
+                android:text="@string/user123" />
+
+            <ImageView
+                android:id="@+id/loginicon"
+                app:srcCompat="@drawable/employee_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="325dp"
+                android:contentDescription="@string/icon"
+                android:layout_marginStart="325dp" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

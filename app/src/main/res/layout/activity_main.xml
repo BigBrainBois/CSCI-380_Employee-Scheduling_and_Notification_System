@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/emplyeeicon"
         android:layout_width="91dp"
         android:layout_height="97dp"
         android:layout_marginTop="228dp"
@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/employee_icon" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/employeebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="72dp"
@@ -29,30 +29,30 @@
         android:onClick="employeeLogIn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/emplyeeicon"
         app:layout_constraintVertical_bias="0.097" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/managerbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/yellow"
         android:text="@string/manager_button"
         android:onClick="managerLogIn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/employeebutton"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/managericon"
         app:layout_constraintVertical_bias="0.097" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/managericon"
         android:layout_width="91dp"
         android:layout_height="97dp"
         android:layout_marginTop="228dp"
         android:contentDescription="@string/icon"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/emplyeeicon"
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
