@@ -32,6 +32,19 @@ public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
 
+    /*
+    * Test to login to get to the next activity*
+    */
+
+    public void logToDash(View v){    // Log In as Manager/Admin
+        Intent authenticate = new Intent(this, dashboard.class);
+        startActivity(authenticate);
+    }
+    /*
+     * This only goes back to the main activity, not the actual dashboard :C
+     */
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,11 +130,6 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
-
-
-//                Go to next activity after authentication
-//                Intent authenticate = new Intent(this, dashboard.class);
-//                startActivity(authenticate);
             }
         });
     }

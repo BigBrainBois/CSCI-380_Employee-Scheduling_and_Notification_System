@@ -19,4 +19,14 @@
     <string name="my_dashboard">My Dashboard</string>
     <string name="user123">user123</string>
     <string name="view_schedule">View Schedule</string>
+    <string name="my_schedule">My Schedule</string>
+    <string name="sunday">Sunday</string>
+    <string name="saturday">Saturday</string>
+    <string name="friday">Friday</string>
+    <string name="thursday">Thursday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="monday">Monday</string>
+    <string name="week_1">Week 1</string>
+    <string name="notifications">Notifications</string>
 </resources>

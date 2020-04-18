@@ -65,7 +65,7 @@
                 android:layout_margin="50dp">
 
                 <ImageView
-                    android:id="@+id/scheduleicon"
+                    android:id="@+id/scheduleIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -78,7 +78,7 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-            <!--Requests Card-->
+            <!--Requests Card THIS WILL BE A FRAGMENT-->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/requests"
                 android:layout_width="108dp"
@@ -86,7 +86,7 @@
                 android:layout_margin="50dp">
 
                 <ImageView
-                    android:id="@+id/requesticon"
+                    android:id="@+id/requestIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -104,7 +104,7 @@
                 android:layout_margin="50dp">
 
                 <ImageView
-                    android:id="@+id/notificationicon"
+                    android:id="@+id/notificationIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -122,7 +122,7 @@
                 android:layout_margin="50dp">
 
                 <ImageView
-                    android:id="@+id/messagingicon"
+                    android:id="@+id/messagingIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -132,7 +132,5 @@
             </com.google.android.material.card.MaterialCardView>
 
         </androidx.gridlayout.widget.GridLayout>
-
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

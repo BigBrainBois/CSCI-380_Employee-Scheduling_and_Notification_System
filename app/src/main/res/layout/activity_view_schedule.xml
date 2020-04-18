@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewSchedule">
+
+    <TextView
+        android:id="@+id/scheduleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/my_schedule"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/scheduleIcon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toEndOf="@+id/scheduleText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/scheduleview"
+        android:contentDescription="@string/icon" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="363dp"
+        android:layout_height="606dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleText"
+        app:layout_constraintVertical_bias="0.157">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/week_1"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+
+        <TableRow
+            android:id="@+id/Sunday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/sun"
+                android:text="@string/sunday"
+                android:textSize="16sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/Monday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/mon"
+                android:text="@string/monday"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Tuesday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tues"
+                android:text="@string/tuesday"
+                android:textSize="16sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/Wednesday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/wed"
+                android:text="@string/wednesday"
+                android:textSize="16sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/Thursday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/thurs"
+                android:text="@string/thursday"
+                android:textSize="16sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/Friday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/fri"
+                android:text="@string/friday"
+                android:textSize="16sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/Saturday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/sat"
+                android:text="@string/saturday"
+                android:textSize="16sp" />
+
+        </TableRow>
+    </TableLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
