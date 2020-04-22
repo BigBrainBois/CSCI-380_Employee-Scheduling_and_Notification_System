@@ -30,4 +30,7 @@
     <string name="week_1">Week 1</string>
     <string name="notifications">Notifications</string>
     <string name="messaging">Messaging</string>
+    <string name="message">Message</string>
+    <string name="day_of_the_week">Day of the Week</string>
+    <string name="time_scheduled">Time scheduled</string>
 </resources>

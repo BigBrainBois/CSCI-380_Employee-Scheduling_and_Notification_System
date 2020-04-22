@@ -113,24 +113,6 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-
-            <!--Messaging Card-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/messaging"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="50dp">
-
-                <ImageView
-                    android:id="@+id/messagingIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/icon"
-                    app:srcCompat="@drawable/messaging" />
-
-            </com.google.android.material.card.MaterialCardView>
-
         </androidx.gridlayout.widget.GridLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

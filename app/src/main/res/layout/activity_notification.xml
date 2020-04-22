@@ -42,6 +42,84 @@
         app:layout_constraintTop_toBottomOf="@+id/notificationText"
         app:layout_constraintVertical_bias="0.157">
 
+        <TableRow
+            android:id="@+id/firstRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:text="@string/message"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/secRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:text="@string/message"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/thirdRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:text="@string/message"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fourthRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:text="@string/message"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fifthRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:text="@string/message"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/sixthRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:text="@string/message"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/sevRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:text="@string/message"/>
+        </TableRow>
+
+
 
     </TableLayout>
 

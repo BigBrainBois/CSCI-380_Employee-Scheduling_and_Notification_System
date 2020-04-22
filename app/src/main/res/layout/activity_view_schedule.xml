@@ -50,8 +50,27 @@
             android:gravity="center_horizontal"
             android:text="@string/week_1"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:padding="10dp"/>
 
+        <TableRow
+            android:id="@+id/Bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/days"
+                android:text="@string/day_of_the_week"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_marginLeft="115dp"
+                android:layout_marginStart="115dp"
+                android:text="@string/time_scheduled"
+                android:textSize="16sp" />
+        </TableRow>
 
         <TableRow
             android:id="@+id/Sunday"
