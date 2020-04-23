@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dashboard">
+    tools:context=".DashboardActivity">
 
     <LinearLayout
         android:id="@+id/dashLLayout"
@@ -18,7 +18,9 @@
             android:id="@+id/dashRLayout"
             android:layout_width="match_parent"
             android:layout_height="125dp"
-            android:background="@drawable/background">
+            android:background="@color/blue"
+            android:paddingTop="30dp"
+            >
 
             <TextView
                 android:id="@+id/dashText"
@@ -58,60 +60,60 @@
 
 
             <!--View Schedule Card-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/schedule"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="50dp">
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/schedule"-->
+<!--                android:layout_width="108dp"-->
+<!--                android:layout_height="108dp"-->
+<!--                android:layout_margin="50dp">-->
 
-                <ImageView
-                    android:id="@+id/scheduleIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/icon"
-                    app:srcCompat="@drawable/scheduleview" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/scheduleIcon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:contentDescription="@string/icon"-->
+<!--                    app:srcCompat="@drawable/scheduleview" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <!--Requests Card THIS WILL BE A FRAGMENT-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/requests"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="50dp">
-
-                <ImageView
-                    android:id="@+id/requestIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/icon"
-                    app:srcCompat="@drawable/request" />
-
-            </com.google.android.material.card.MaterialCardView>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
 
 
-            <!--Notification Card-->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="50dp">
+<!--            &lt;!&ndash;Requests Card THIS WILL BE A FRAGMENT&ndash;&gt;-->
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/requests"-->
+<!--                android:layout_width="108dp"-->
+<!--                android:layout_height="108dp"-->
+<!--                android:layout_margin="50dp">-->
 
-                <ImageView
-                    android:id="@+id/notificationIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/icon"
-                    app:srcCompat="@drawable/notification" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/requestIcon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:contentDescription="@string/icon"-->
+<!--                    app:srcCompat="@drawable/request" />-->
 
-            </com.google.android.material.card.MaterialCardView>
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--            &lt;!&ndash;Notification Card&ndash;&gt;-->
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/notification"-->
+<!--                android:layout_width="108dp"-->
+<!--                android:layout_height="108dp"-->
+<!--                android:layout_margin="50dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/notificationIcon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:contentDescription="@string/icon"-->
+<!--                    app:srcCompat="@drawable/notification" />-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
 
         </androidx.gridlayout.widget.GridLayout>
     </LinearLayout>
