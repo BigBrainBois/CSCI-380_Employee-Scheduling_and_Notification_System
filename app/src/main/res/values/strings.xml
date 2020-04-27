@@ -38,4 +38,9 @@
     <string name="time_end">Time End</string>
     <string name="submit">Submit</string>
     <string name="date">Date</string>
+    <string name="switch_schedules">Switch Schedules</string>
+    <string name="request_days_off">Request Days Off</string>
+    <string name="switching_from">Switching from:</string>
+    <string name="day">Day</string>
+    <string name="to">To:</string>
 </resources>
