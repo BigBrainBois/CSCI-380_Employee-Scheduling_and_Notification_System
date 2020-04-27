@@ -19,19 +19,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
         android:id="@+id/scheduleIcon"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginBottom="6dp"
+        android:contentDescription="@string/icon"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toEndOf="@+id/daysofftext"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/switchsched"
-        android:contentDescription="@string/icon" />
+        app:layout_constraintVertical_bias="0.438"
+        app:srcCompat="@drawable/switchsched" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -41,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/daysofftext"
-        app:layout_constraintVertical_bias="0.033">
+        app:layout_constraintVertical_bias="0.137">
 
         <TextView
             android:text="@string/switching_from"
@@ -55,19 +56,19 @@
             android:paddingBottom="5dp">
 
             <EditText
-                android:text="@string/day"
-                android:textSize="16sp"
                 android:ems="5"
+                android:gravity="center_horizontal"
+                android:text="@string/day"
                 android:textAlignment="center"
-                android:gravity="center_horizontal"/>
+                android:textSize="16sp" />
 
             <EditText
                 android:layout_width="241dp"
                 android:ems="5"
                 android:gravity="center_horizontal"
                 android:inputType="time"
-                android:textAlignment="center"
-                android:text="8:00am-4:00pm"/>
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -84,11 +85,11 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:text="EmployeeName"
-                android:inputType="textPersonName"
                 android:ems="5"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:text="Employee Name"
+                android:textAlignment="center" />
         </TableRow>
 
 
@@ -100,23 +101,22 @@
             android:paddingBottom="5dp">
 
             <EditText
-                android:text="@string/day"
-                android:textSize="16sp"
                 android:ems="5"
+                android:gravity="center_horizontal"
+                android:text="@string/day"
                 android:textAlignment="center"
-                android:gravity="center_horizontal" />
+                android:textSize="16sp" />
 
             <EditText
                 android:layout_width="241dp"
                 android:ems="5"
                 android:gravity="center_horizontal"
                 android:inputType="time"
-                android:textAlignment="center"
-                android:text="8:00am-4:00pm"/>
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center" />
         </TableRow>
 
     </TableLayout>
-
 
     <Button
         android:id="@+id/submitButton"
@@ -127,8 +127,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.113" />
 </androidx.constraintlayout.widget.ConstraintLayout>
