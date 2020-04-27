@@ -86,7 +86,6 @@
         android:background="@color/yellow"
 
         android:text="@string/log_in"
-        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="14sp"
 
