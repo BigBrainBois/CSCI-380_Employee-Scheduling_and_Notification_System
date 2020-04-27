@@ -7,7 +7,7 @@
     tools:context=".Notification">
 
     <TextView
-        android:id="@+id/notificationText"
+        android:id="@+id/chavailabilityText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.876"
-        app:layout_constraintStart_toEndOf="@+id/notificationText"
+        app:layout_constraintStart_toEndOf="@+id/chavailabilityText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/notification" />
@@ -35,12 +35,14 @@
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="363dp"
-        android:layout_height="606dp"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notificationText"
-        app:layout_constraintVertical_bias="0.157">
+        app:layout_constraintTop_toBottomOf="@+id/chavailabilityText"
+        app:layout_constraintVertical_bias="0.049">
+
+
 
         <TableRow
             android:id="@+id/firstRow"
@@ -49,75 +51,113 @@
             android:layout_margin="10dp">
 
             <TextView
+                android:padding="20dp"
+                android:text="@string/date"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="@string/message"
                 android:textSize="16sp"
-                android:text="@string/message"/>
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"/>
         </TableRow>
 
         <TableRow
-            android:id="@+id/secRow"
+            android:id="@+id/firstRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp">
 
             <TextView
+                android:padding="20dp"
+                android:text="@string/date"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="@string/message"
                 android:textSize="16sp"
-                android:text="@string/message"/>
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"/>
         </TableRow>
 
         <TableRow
-            android:id="@+id/thirdRow"
+            android:id="@+id/firstRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp">
 
             <TextView
+                android:padding="20dp"
+                android:text="@string/date"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="@string/message"
                 android:textSize="16sp"
-                android:text="@string/message"/>
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"/>
         </TableRow>
 
         <TableRow
-            android:id="@+id/fourthRow"
+            android:id="@+id/firstRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp">
 
             <TextView
+                android:padding="20dp"
+                android:text="@string/date"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="@string/message"
                 android:textSize="16sp"
-                android:text="@string/message"/>
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"/>
         </TableRow>
 
         <TableRow
-            android:id="@+id/fifthRow"
+            android:id="@+id/firstRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp">
 
             <TextView
+                android:padding="20dp"
+                android:text="@string/date"
+                android:textSize="16sp" />
+
+            <TextView
+                android:text="@string/message"
                 android:textSize="16sp"
-                android:text="@string/message"/>
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"/>
         </TableRow>
 
         <TableRow
-            android:id="@+id/sixthRow"
+            android:id="@+id/firstRow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp">
 
             <TextView
-                android:textSize="16sp"
-                android:text="@string/message"/>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/sevRow"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp">
+                android:padding="20dp"
+                android:text="@string/date"
+                android:textSize="16sp" />
 
             <TextView
+                android:text="@string/message"
                 android:textSize="16sp"
-                android:text="@string/message"/>
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="20dp"/>
         </TableRow>
+
 
 
 
