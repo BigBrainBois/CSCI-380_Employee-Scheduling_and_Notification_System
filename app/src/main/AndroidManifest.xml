@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RequestsActivity"></activity>
+        <activity android:name=".DaysoffRequest"></activity>
+        <activity android:name=".SwitchSchedule" />
+        <activity android:name=".ChangeSchedule" />
+        <activity android:name=".RequestsActivity" />
         <activity android:name=".Notification" />
         <activity android:name=".ViewSchedule" />
         <activity android:name=".DashboardActivity" />

@@ -49,7 +49,7 @@ public class DashboardActivity extends AppCompatActivity {
         requestCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, ViewSchedule.class);
+                Intent intent = new Intent(DashboardActivity.this, RequestsActivity.class);
                 startActivity(intent);
             }
         });

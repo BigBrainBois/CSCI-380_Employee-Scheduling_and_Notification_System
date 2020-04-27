@@ -29,7 +29,7 @@ public class RequestsActivity extends AppCompatActivity {
         changeSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RequestsActivity.this, Notification.class);
+                Intent intent = new Intent(RequestsActivity.this, ChangeSchedule.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class RequestsActivity extends AppCompatActivity {
         switchSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RequestsActivity.this, Notification.class);
+                Intent intent = new Intent(RequestsActivity.this, SwitchSchedule.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +49,7 @@ public class RequestsActivity extends AppCompatActivity {
         daysOff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RequestsActivity.this, Notification.class);
+                Intent intent = new Intent(RequestsActivity.this, DaysoffRequest.class);
                 startActivity(intent);
             }
         });
