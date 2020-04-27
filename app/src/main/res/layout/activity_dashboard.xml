@@ -60,32 +60,71 @@
 
 
             <!--View Schedule Card-->
-            <Button
-                android:id="@+id/scheduleCard"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="49dp"
-                android:contentDescription="@string/icon"
-                android:background="@drawable/scheduleview"/>
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <Button
+                    android:id="@+id/scheduleCard"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:background="@drawable/scheduleview"
+                    android:contentDescription="@string/icon" >
+                </Button>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_my_schedule"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginStart="47dp" />
+            </RelativeLayout>
 
 
-            <!--Requests Card-->
-            <Button
-                android:id="@+id/requestCard"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="49dp"
-                android:contentDescription="@string/icon"
-                android:background="@drawable/request"/>
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <!--Requests Card-->
+                <Button
+                    android:id="@+id/requestCard"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:background="@drawable/request"
+                    android:contentDescription="@string/icon" />
 
-            <!--Notification Card-->
-            <Button
-                android:id="@+id/notificationCard"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="49dp"
-                android:contentDescription="@string/icon"
-                android:background="@drawable/notification" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_requests"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginStart="45dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <!--Notification Card-->
+                <Button
+                    android:id="@+id/notificationCard"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:background="@drawable/notification"
+                    android:contentDescription="@string/icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notifications"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginLeft="63dp"
+                    android:layout_marginStart="63dp" />
+            </RelativeLayout>
+
 
 
         </androidx.gridlayout.widget.GridLayout>

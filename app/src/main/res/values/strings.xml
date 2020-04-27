@@ -44,4 +44,8 @@
     <string name="day">Day</string>
     <string name="to">To:</string>
     <string name="from">From:</string>
+    <string name="schedule_requests">Schedule Requests</string>
+    <string name="view_my_schedule">View My Schedule</string>
+    <string name="notifications">Notifications</string>
+    <string name="change_availability">Change Availability</string>
 </resources>
