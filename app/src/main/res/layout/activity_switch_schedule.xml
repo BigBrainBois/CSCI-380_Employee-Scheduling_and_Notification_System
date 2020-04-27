@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SwitchSchedule">
+
+
+    <TextView
+        android:id="@+id/daysofftext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/switch_schedules"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/scheduleIcon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="6dp"
+        android:contentDescription="@string/icon"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toEndOf="@+id/daysofftext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438"
+        app:srcCompat="@drawable/switchsched" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="363dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysofftext"
+        app:layout_constraintVertical_bias="0.137">
+
+        <TextView
+            android:text="@string/switching_from"
+            android:textSize="18sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <EditText
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:text="@string/day"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="241dp"
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:inputType="time"
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="57dp"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                android:textSize="18sp" />
+
+            <EditText
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:text="Employee Name"
+                android:textAlignment="center" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <EditText
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:text="@string/day"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <EditText
+                android:layout_width="241dp"
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:inputType="time"
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="101dp"
+        android:layout_height="57dp"
+        android:background="@color/yellow"
+        android:text="@string/submit"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.113" />
+</androidx.constraintlayout.widget.ConstraintLayout>

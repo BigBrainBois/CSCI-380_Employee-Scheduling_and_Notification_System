@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
-
+    tools:context=".RequestsActivity">
     <LinearLayout
         android:id="@+id/dashLLayout"
         android:layout_width="match_parent"
@@ -59,35 +58,36 @@
             app:rowCount="2">
 
 
-            <!--View Schedule Card-->
+            <!--Change Schedule Card-->
             <Button
-                android:id="@+id/scheduleCard"
+                android:id="@+id/changeSchedule"
                 android:layout_width="108dp"
                 android:layout_height="108dp"
                 android:layout_margin="49dp"
                 android:contentDescription="@string/icon"
-                android:background="@drawable/scheduleview"/>
+                android:background="@drawable/changeavailability"/>
 
 
-            <!--Requests Card-->
+            <!--Switch Schedules Card-->
             <Button
-                android:id="@+id/requestCard"
+                android:id="@+id/switchSchedule"
                 android:layout_width="108dp"
                 android:layout_height="108dp"
                 android:layout_margin="49dp"
                 android:contentDescription="@string/icon"
-                android:background="@drawable/request"/>
+                android:background="@drawable/switchsched"/>
 
-            <!--Notification Card-->
+            <!--Day Offs Card-->
             <Button
-                android:id="@+id/notificationCard"
+                android:id="@+id/daysOff"
                 android:layout_width="108dp"
                 android:layout_height="108dp"
                 android:layout_margin="49dp"
                 android:contentDescription="@string/icon"
-                android:background="@drawable/notification" />
+                android:background="@drawable/dayoff" />
 
 
         </androidx.gridlayout.widget.GridLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

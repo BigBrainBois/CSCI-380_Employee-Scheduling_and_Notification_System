@@ -33,4 +33,15 @@
     <string name="message">Message</string>
     <string name="day_of_the_week">Day of the Week</string>
     <string name="time_scheduled">Time scheduled</string>
+    <string name="change_your_availability">Change Your Availability</string>
+    <string name="time_start">Time Start</string>
+    <string name="time_end">Time End</string>
+    <string name="submit">Submit</string>
+    <string name="date">Date</string>
+    <string name="switch_schedules">Switch Schedules</string>
+    <string name="request_days_off">Request Days Off</string>
+    <string name="switching_from">Switching from:</string>
+    <string name="day">Day</string>
+    <string name="to">To:</string>
+    <string name="from">From:</string>
 </resources>

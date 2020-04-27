@@ -7,7 +7,7 @@
     tools:context=".ViewSchedule">
 
     <TextView
-        android:id="@+id/scheduleText"
+        android:id="@+id/daysofftext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.878"
-        app:layout_constraintStart_toEndOf="@+id/scheduleText"
+        app:layout_constraintStart_toEndOf="@+id/daysofftext"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/scheduleview"
@@ -40,7 +40,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scheduleText"
+        app:layout_constraintTop_toBottomOf="@+id/daysofftext"
         app:layout_constraintVertical_bias="0.157">
 
         <TextView
@@ -57,7 +57,8 @@
             android:id="@+id/Bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/days"
@@ -65,9 +66,9 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/time"
-                android:layout_marginLeft="115dp"
-                android:layout_marginStart="115dp"
+                android:id="@+id/timeText"
+                android:layout_marginLeft="132dp"
+                android:layout_marginStart="132dp"
                 android:text="@string/time_scheduled"
                 android:textSize="16sp" />
         </TableRow>
@@ -76,12 +77,19 @@
             android:id="@+id/Sunday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/sun"
                 android:text="@string/sunday"
                 android:textSize="16sp" />
+
+            <TextView
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
         </TableRow>
 
 
@@ -89,24 +97,38 @@
             android:id="@+id/Monday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/mon"
                 android:text="@string/monday"
                 android:textSize="16sp" />
+
+            <TextView
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
             android:id="@+id/Tuesday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/tues"
                 android:text="@string/tuesday"
                 android:textSize="16sp" />
+
+            <TextView
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
         </TableRow>
 
 
@@ -114,12 +136,19 @@
             android:id="@+id/Wednesday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/wed"
                 android:text="@string/wednesday"
                 android:textSize="16sp" />
+
+            <TextView
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
         </TableRow>
 
 
@@ -127,12 +156,19 @@
             android:id="@+id/Thursday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/thurs"
                 android:text="@string/thursday"
                 android:textSize="16sp" />
+
+            <TextView
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
         </TableRow>
 
 
@@ -140,12 +176,19 @@
             android:id="@+id/Friday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/fri"
                 android:text="@string/friday"
                 android:textSize="16sp" />
+
+            <TextView
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
         </TableRow>
 
 
@@ -153,16 +196,19 @@
             android:id="@+id/Saturday"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/sat"
                 android:text="@string/saturday"
                 android:textSize="16sp" />
 
+            <TextView
+                android:text="8:00am-4:00pm"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
         </TableRow>
     </TableLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
