@@ -48,7 +48,8 @@ if($auth->verifyToken($jwt)){
                 "Username" => $Username,
                 "Name" => $Name,
                 "StartDate" => $StartDate,
-                "EmployeeID" => $EmployeeID
+                "EmployeeID" => $EmployeeID,
+                "Rank" => $Rank
             );
 
             array_push($user_arr["records"],$user_item);

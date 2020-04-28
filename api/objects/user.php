@@ -9,6 +9,7 @@ class User{
     public $Password;
     public $StartDate;
     public $EmployeeID;
+    public $Rank;
 
     public function __construct($db){
         $this->conn = $db;
@@ -17,7 +18,7 @@ class User{
     function read(){
 
         //creating querry
-        $query = "SELECT Username, Name, StartDate, EmployeeID 
+        $query = "SELECT Username, Name, StartDate, EmployeeID, Rank 
         FROM " . $this->table_name . "";
 
         //preparing querry
@@ -33,7 +34,7 @@ class User{
         //creating insert querry
         $query = "INSERT INTO " . $this->table_name . "
         SET Username=:Username, Name=:Name, Email=:Email, Password=:Password, 
-        StartDate=:StartDate, EmployeeID=:EmployeeID";
+        StartDate=:StartDate, EmployeeID=:EmployeeID, Rank=:Rank";
 
         //preparing querry
         $stmt = $this->conn->prepare($query);
@@ -44,6 +45,7 @@ class User{
         $this->Email = htmlspecialchars(strip_tags($this->Email));
         $this->Password = htmlspecialchars(strip_tags($this->Password));
         $this->EmployeeID = htmlspecialchars(strip_tags($this->EmployeeID));
+        $this->Rank = htmlspecialchars(strip_tags($this->Rank));
 
         //hashing password
         $this->Password = password_hash($this->Password,PASSWORD_DEFAULT);
@@ -54,6 +56,7 @@ class User{
         $stmt->bindParam(":Email",$this->Email);
         $stmt->bindParam(":Password",$this->Password);
         $stmt->bindParam(":EmployeeID",$this->EmployeeID);
+        $stmt->bindParam(":Rank",$this->Rank);
         $stmt->bindParam(":StartDate",$this->StartDate);
 
         if($stmt->execute()){

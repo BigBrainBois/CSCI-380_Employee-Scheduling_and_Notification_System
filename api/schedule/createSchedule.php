@@ -8,48 +8,43 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 //include database and user class
 include_once "../config/database.php";
-include_once "../objects/user.php";
+include_once "../objects/schedule.php";
 
 //creating database connection and user object
 $database = new Database();
 $db = $database->getConnection();
-$user = new User($db);
+$schedule = new Schedule($db);
 
 //getting posted data
 $data = json_decode(file_get_contents("php://input"));
 
 //checking if input is empty
 if(
-   !empty($data->Username) &&
-   !empty($data->Name) &&
-   !empty($data->Email) &&
-   !empty($data->Password) &&
    !empty($data->EmployeeID) &&
-   !empty($data->Rank) 
+   !empty($data->Date) &&
+   !empty($data->StartTime) &&
+   !empty($data->EndTime) 
 ){
     //setting user attributes
-    $user->Username = $data->Username;
-    $user->Name = $data->Name;
-    $user->Email = $data->Email;
-    $user->Password = $data->Password;
-    $user->EmployeeID = $data->EmployeeID;
-    $user->Rank = $data->Rank;
-    $user->StartDate = date("Y-m-d");
+    $schedule->EmployeeID = $data->EmployeeID;
+    $schedule->Date = $data->Date;
+    $schedule->StartTime = $data->StartTime;
+    $schedule->EndTime = $data->EndTime;
 
-    if($user->create()){
+    if($schedule->createSchedule()){
         http_response_code(200);
-        echo json_encode(array("message"=> "Successfully added user to database!"));
+        echo json_encode(array("message"=> "Successfully added employee to schedule table!"));
     }
     else{
         http_response_code(503);
-        echo json_encode(array("message"=> "Unable to create a new user."));
+        echo json_encode(array("message"=> "Unable to create a new schedule entry."));
         
     }
     
 }
 else{
     http_response_code(400);
-    echo json_encode(array("message"=> "Failed to create a new user. The data input was incomplete."));
+    echo json_encode(array("message"=> "Failed to create a new schedule entry The data input was incomplete."));
 }
 
 ?>

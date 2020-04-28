@@ -8,48 +8,47 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 //include database and user class
 include_once "../config/database.php";
-include_once "../objects/user.php";
+include_once "../objects/request.php";
 
 //creating database connection and user object
 $database = new Database();
 $db = $database->getConnection();
-$user = new User($db);
+$user = new Request($db);
 
 //getting posted data
 $data = json_decode(file_get_contents("php://input"));
 
 //checking if input is empty
 if(
-   !empty($data->Username) &&
-   !empty($data->Name) &&
-   !empty($data->Email) &&
-   !empty($data->Password) &&
+   !empty($data->RequestID) &&
    !empty($data->EmployeeID) &&
-   !empty($data->Rank) 
+   !empty($data->DateRequested) &&
+   !empty($data->Status) &&
+   !empty($data->RequestType)&&
+   !empty($data->Message)
 ){
     //setting user attributes
-    $user->Username = $data->Username;
-    $user->Name = $data->Name;
-    $user->Email = $data->Email;
-    $user->Password = $data->Password;
+    $user->RequestID = $data->RequestID;
     $user->EmployeeID = $data->EmployeeID;
-    $user->Rank = $data->Rank;
-    $user->StartDate = date("Y-m-d");
+    $user->DateRequested = $data->DateRequested;
+    $user->Status = $data->Status;
+    $user->RequestType = $data->RequestType;
+    $user->Message = $data->Message;
 
-    if($user->create()){
+    if($user->createRequest()){
         http_response_code(200);
-        echo json_encode(array("message"=> "Successfully added user to database!"));
+        echo json_encode(array("message"=> "Successfully submitted request to supervisor!"));
     }
     else{
         http_response_code(503);
-        echo json_encode(array("message"=> "Unable to create a new user."));
+        echo json_encode(array("message"=> "Unable to submit request."));
         
     }
     
 }
 else{
     http_response_code(400);
-    echo json_encode(array("message"=> "Failed to create a new user. The data input was incomplete."));
+    echo json_encode(array("message"=> "Failed to submit request. The fields input were incomplete."));
 }
 
 ?>

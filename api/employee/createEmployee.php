@@ -8,41 +8,38 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 //include database and user class
 include_once "../config/database.php";
-include_once "../objects/user.php";
+include_once "../objects/employee.php";
 
 //creating database connection and user object
 $database = new Database();
 $db = $database->getConnection();
-$user = new User($db);
+$user = new Employee($db);
 
 //getting posted data
 $data = json_decode(file_get_contents("php://input"));
 
 //checking if input is empty
 if(
-   !empty($data->Username) &&
-   !empty($data->Name) &&
-   !empty($data->Email) &&
-   !empty($data->Password) &&
    !empty($data->EmployeeID) &&
-   !empty($data->Rank) 
+   !empty($data->SickDaysUsed) &&
+   !empty($data->SickdaysRemaining) &&
+   !empty($data->VacationDaysUsed) &&
+   !empty($data->VacationDaysRemaining)
 ){
     //setting user attributes
-    $user->Username = $data->Username;
-    $user->Name = $data->Name;
-    $user->Email = $data->Email;
-    $user->Password = $data->Password;
     $user->EmployeeID = $data->EmployeeID;
-    $user->Rank = $data->Rank;
-    $user->StartDate = date("Y-m-d");
+    $user->SickDaysUsed = $data->SickDaysUsed;
+    $user->SickdaysRemaining = $data->SickdaysRemaining;
+    $user->VacationDaysUsed = $data->VacationDaysUsed;
+    $user->VacationDaysRemaining = $data->VacationDaysRemaining;
 
-    if($user->create()){
+    if($user->createEmployee()){
         http_response_code(200);
-        echo json_encode(array("message"=> "Successfully added user to database!"));
+        echo json_encode(array("message"=> "Successfully added employee to table!"));
     }
     else{
         http_response_code(503);
-        echo json_encode(array("message"=> "Unable to create a new user."));
+        echo json_encode(array("message"=> "Unable to create a new employee."));
         
     }
     
