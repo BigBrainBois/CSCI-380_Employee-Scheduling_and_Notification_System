@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="25dp"
-                android:text="@string/my_dashboard"
+                android:text="@string/schedule_requests"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
@@ -58,34 +58,70 @@
             app:rowCount="2">
 
 
-            <!--Change Schedule Card-->
-            <Button
-                android:id="@+id/changeSchedule"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="49dp"
-                android:contentDescription="@string/icon"
-                android:background="@drawable/changeavailability"/>
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <!--Change Schedule Card-->
+                <Button
+                    android:id="@+id/changeSchedule"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:contentDescription="@string/icon"
+                    android:background="@drawable/changeavailability"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_availability"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginStart="45dp" />
+            </RelativeLayout>
 
 
-            <!--Switch Schedules Card-->
-            <Button
-                android:id="@+id/switchSchedule"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="49dp"
-                android:contentDescription="@string/icon"
-                android:background="@drawable/switchsched"/>
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <!--Switch Schedules Card-->
+                <Button
+                    android:id="@+id/switchSchedule"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:contentDescription="@string/icon"
+                    android:background="@drawable/switchsched"/>
 
-            <!--Day Offs Card-->
-            <Button
-                android:id="@+id/daysOff"
-                android:layout_width="108dp"
-                android:layout_height="108dp"
-                android:layout_margin="49dp"
-                android:contentDescription="@string/icon"
-                android:background="@drawable/dayoff" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Switch Schedules"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginStart="45dp" />
+            </RelativeLayout>
 
+
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <!--Day Offs Card-->
+                <Button
+                    android:id="@+id/daysOff"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:contentDescription="@string/icon"
+                    android:background="@drawable/dayoff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Request Days Off"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp" />
+            </RelativeLayout>
 
         </androidx.gridlayout.widget.GridLayout>
     </LinearLayout>
