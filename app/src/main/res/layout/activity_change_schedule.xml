@@ -7,7 +7,7 @@
     tools:context=".ChangeSchedule">
 
     <TextView
-        android:id="@+id/chavailabilityText"
+        android:id="@+id/headingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toEndOf="@+id/chavailabilityText"
+        app:layout_constraintStart_toEndOf="@+id/headingText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/changeavailability" />
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chavailabilityText"
+        app:layout_constraintTop_toBottomOf="@+id/headingText"
         app:layout_constraintVertical_bias="0.047">
 
         <TableRow

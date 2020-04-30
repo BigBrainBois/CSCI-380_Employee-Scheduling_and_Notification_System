@@ -18,9 +18,7 @@
             android:id="@+id/dashRLayout"
             android:layout_width="match_parent"
             android:layout_height="125dp"
-            android:background="@drawable/background"
-            android:paddingTop="30dp"
-            >
+            android:background="@drawable/background">
 
             <TextView
                 android:id="@+id/dashText"
@@ -49,7 +47,7 @@
                 android:layout_marginLeft="325dp"
                 android:layout_marginTop="25dp"
                 android:contentDescription="@string/icon"
-                app:srcCompat="@drawable/manager_icon" />
+                app:srcCompat="@drawable/employee_icon" />
         </RelativeLayout>
 
         <androidx.gridlayout.widget.GridLayout
