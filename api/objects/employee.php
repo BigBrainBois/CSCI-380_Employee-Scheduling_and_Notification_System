@@ -33,8 +33,8 @@ class Employee{
     function createEmployee(){
         //creating insert querry
         $query = "INSERT INTO " . $this->table_name . "
-        SET EmployeeID=:EmployeeID, SickDaysUsed=:SickDaysUsed, SickDaysRemaining=:SickDaysRemaining, 
-        VacationDaysUsed=:VacationDaysUsed, VacationDaysRemaining=:VacationDaysRemaining";
+        SET EmployeeID =:EmployeeID, SickDaysUsed =:SickDaysUsed, SickDaysRemaining=:SickDaysRemaining, 
+        VacationDaysUsed=:VacationDaysUsed, VacationDaysRemaining=:VacationDaysRemaining ";
 
         //preparing querry
         $stmt = $this->conn->prepare($query);

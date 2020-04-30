@@ -29,7 +29,7 @@ if(
     //setting employee attributes
     $employee->EmployeeID = $data->EmployeeID;
     $employee->SickDaysUsed = $data->SickDaysUsed;
-    $employee->SickdaysRemaining = $data->SickDaysRemaining;
+    $employee->SickDaysRemaining = $data->SickDaysRemaining;
     $employee->VacationDaysUsed = $data->VacationDaysUsed;
     $employee->VacationDaysRemaining = $data->VacationDaysRemaining;
 
