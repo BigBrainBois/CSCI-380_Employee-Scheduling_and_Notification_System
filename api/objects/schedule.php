@@ -17,10 +17,10 @@ class Schedule{
     function readSchedule(){
 
         //creating querry
-        $query = "Date, EmployeeID, 
+        $query = "SELECT Date, ScheduleID, EmployeeID, 
         StartTime, EndTime
         FROM " . $this->table_name . " 
-        ORDERED BY Date";
+        ORDER BY Date";
 
         //preparing querry
         $stmt = $this->conn->prepare($query);

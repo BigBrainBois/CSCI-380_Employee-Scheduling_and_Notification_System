@@ -19,7 +19,7 @@ class Request{
 
         //creating querry
         $query = "SELECT RequestID, EmployeeID, DateRequested, 
-        Status, RequestType, Messages
+        Status, RequestType, Message
         FROM " . $this->table_name . "";
 
         //preparing querry

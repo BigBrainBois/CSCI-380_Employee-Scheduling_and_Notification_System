@@ -30,7 +30,7 @@ if($num>0){
         extract($row);
 
         $schedule_item=array(
-            "ID" => $ID,
+            "ID" => $ScheduleID,
             "EmployeeID" => $EmployeeID,
             "Date" => $Date,
             "StartTime" => $StartTime,
