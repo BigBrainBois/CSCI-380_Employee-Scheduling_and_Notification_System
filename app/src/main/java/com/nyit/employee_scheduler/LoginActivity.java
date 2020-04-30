@@ -21,6 +21,7 @@ public class LoginActivity extends Activity {
     private EditText username;
     private EditText password;
     private Button login;
+    private Intent currentIntent;
 
 
     @Override
@@ -30,7 +31,10 @@ public class LoginActivity extends Activity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
+        currentIntent = this.getIntent();
         configureLogin();
+
+
     }
 
 
@@ -64,6 +68,7 @@ public class LoginActivity extends Activity {
                     JSONObject jsonParam = new JSONObject();
                     jsonParam.put("Username", username );
                     jsonParam.put("Password", password);
+                    jsonParam.put("Rank",  currentIntent.getStringExtra("Rank"));
 
 
                     DataOutputStream os = new DataOutputStream(conn.getOutputStream());

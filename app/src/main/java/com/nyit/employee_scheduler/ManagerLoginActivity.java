@@ -21,6 +21,7 @@ public class ManagerLoginActivity extends AppCompatActivity {
     private EditText username;
     private EditText password;
     private Button login;
+    private Intent currentIntent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class ManagerLoginActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
+        currentIntent = this.getIntent();
         configureLogin();
     }
 
@@ -61,6 +63,7 @@ public class ManagerLoginActivity extends AppCompatActivity {
                     JSONObject jsonParam = new JSONObject();
                     jsonParam.put("Username", username );
                     jsonParam.put("Password", password);
+                    jsonParam.put("Rank", currentIntent.getStringExtra("Rank"));
 
 
                     DataOutputStream os = new DataOutputStream(conn.getOutputStream());

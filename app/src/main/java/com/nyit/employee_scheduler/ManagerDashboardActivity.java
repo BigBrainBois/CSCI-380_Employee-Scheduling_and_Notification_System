@@ -17,7 +17,7 @@ public class ManagerDashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_dashboard);
-        breakdownCard = findViewById(R.id.scheduleCard);
+        breakdownCard = findViewById(R.id.breakdownCard);
         requestsCard = findViewById(R.id.requestsCard);
         configureBreakdown();
         configureRequests();
