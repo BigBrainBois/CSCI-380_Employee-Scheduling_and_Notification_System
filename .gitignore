@@ -12,3 +12,5 @@
 /captures
 .externalNativeBuild
 .cxx
+api/config/auth.php
+api/config/database.php
