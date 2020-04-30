@@ -22,14 +22,14 @@ $data = json_decode(file_get_contents("php://input"));
 if(
    !empty($data->EmployeeID) &&
    !empty($data->SickDaysUsed) &&
-   !empty($data->SickdaysRemaining) &&
+   !empty($data->SickDaysRemaining) &&
    !empty($data->VacationDaysUsed) &&
    !empty($data->VacationDaysRemaining)
 ){
-    //setting user attributes
+    //setting employee attributes
     $employee->EmployeeID = $data->EmployeeID;
     $employee->SickDaysUsed = $data->SickDaysUsed;
-    $employee->SickdaysRemaining = $data->SickdaysRemaining;
+    $employee->SickdaysRemaining = $data->SickDaysRemaining;
     $employee->VacationDaysUsed = $data->VacationDaysUsed;
     $employee->VacationDaysRemaining = $data->VacationDaysRemaining;
 
@@ -46,7 +46,7 @@ if(
 }
 else{
     http_response_code(400);
-    echo json_encode(array("message"=> "Failed to create a new user. The data input was incomplete."));
+    echo json_encode(array("message"=> "Failed to create a new employee. The data input was incomplete."));
 }
 
 ?>

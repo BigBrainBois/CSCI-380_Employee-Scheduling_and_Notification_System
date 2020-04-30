@@ -85,11 +85,11 @@ class Employee{
         $this->EmployeeID=htmlspecialchars(strip_tags($this->EmployeeID));
       
         // bind new values
-        $stmt->bindParam(':SickDaysUsed', $this->SickDaysUsed);
-        $stmt->bindParam(':SickDaysRemaining', $this->SickDaysRemaining);
-        $stmt->bindParam(':VacationDaysUsed', $this->VacationDaysUsed);
-        $stmt->bindParam(':VacationDaysRemaining', $this->cVacationDaysRemaining);
-        $stmt->bindParam(':EmployeeID', $this->EmployeeID);
+        $stmt->bindParam(":SickDaysUsed", $this->SickDaysUsed);
+        $stmt->bindParam(":SickDaysRemaining", $this->SickDaysRemaining);
+        $stmt->bindParam(":VacationDaysUsed", $this->VacationDaysUsed);
+        $stmt->bindParam(":VacationDaysRemaining", $this->VacationDaysRemaining);
+        $stmt->bindParam(":EmployeeID", $this->EmployeeID);
       
         // execute the query
         if($stmt->execute()){
