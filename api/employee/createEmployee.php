@@ -13,7 +13,7 @@ include_once "../objects/employee.php";
 //creating database connection and user object
 $database = new Database();
 $db = $database->getConnection();
-$user = new Employee($db);
+$employee = new Employee($db);
 
 //getting posted data
 $data = json_decode(file_get_contents("php://input"));
@@ -27,13 +27,13 @@ if(
    !empty($data->VacationDaysRemaining)
 ){
     //setting user attributes
-    $user->EmployeeID = $data->EmployeeID;
-    $user->SickDaysUsed = $data->SickDaysUsed;
-    $user->SickdaysRemaining = $data->SickdaysRemaining;
-    $user->VacationDaysUsed = $data->VacationDaysUsed;
-    $user->VacationDaysRemaining = $data->VacationDaysRemaining;
+    $employee->EmployeeID = $data->EmployeeID;
+    $employee->SickDaysUsed = $data->SickDaysUsed;
+    $employee->SickdaysRemaining = $data->SickdaysRemaining;
+    $employee->VacationDaysUsed = $data->VacationDaysUsed;
+    $employee->VacationDaysRemaining = $data->VacationDaysRemaining;
 
-    if($user->createEmployee()){
+    if($employee->createEmployee()){
         http_response_code(200);
         echo json_encode(array("message"=> "Successfully added employee to table!"));
     }

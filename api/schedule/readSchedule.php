@@ -12,7 +12,7 @@ $database = new Database();
 $db = $database->getConnection();
   
 // initialize object
-$request = new Schedule($db);
+$schedule = new Schedule($db);
   
 // query categorys
 $stmt = $schedule->readSchedule();

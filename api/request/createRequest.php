@@ -13,7 +13,7 @@ include_once "../objects/request.php";
 //creating database connection and user object
 $database = new Database();
 $db = $database->getConnection();
-$user = new Request($db);
+$request = new Request($db);
 
 //getting posted data
 $data = json_decode(file_get_contents("php://input"));
@@ -28,14 +28,14 @@ if(
    !empty($data->Message)
 ){
     //setting user attributes
-    $user->RequestID = $data->RequestID;
-    $user->EmployeeID = $data->EmployeeID;
-    $user->DateRequested = $data->DateRequested;
-    $user->Status = $data->Status;
-    $user->RequestType = $data->RequestType;
-    $user->Message = $data->Message;
+    $request->RequestID = $data->RequestID;
+    $request->EmployeeID = $data->EmployeeID;
+    $request->DateRequested = $data->DateRequested;
+    $request->Status = $data->Status;
+    $request->RequestType = $data->RequestType;
+    $request->Message = $data->Message;
 
-    if($user->createRequest()){
+    if($request->createRequest()){
         http_response_code(200);
         echo json_encode(array("message"=> "Successfully submitted request to supervisor!"));
     }
