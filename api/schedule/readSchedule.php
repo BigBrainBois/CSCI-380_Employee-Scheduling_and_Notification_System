@@ -12,7 +12,7 @@ $database = new Database();
 $db = $database->getConnection();
   
 // initialize object
-$request = new Schedule($db);
+$schedule = new Schedule($db);
   
 // query categorys
 $stmt = $schedule->readSchedule();
@@ -48,7 +48,6 @@ if($num>0){
 
 
 }
-  
 else{
   
     // set response code - 404 Not found
@@ -56,7 +55,7 @@ else{
   
     // tell the user no categories found
     echo json_encode(
-        array("message" => "No request found.")
+        array("message" => "No Schedule found.")
     );
 }
 ?>

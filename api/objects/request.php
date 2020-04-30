@@ -15,7 +15,7 @@ class Request{
         $this->conn = $db;
     }
 
-    function readEmployee(){
+    function readRequest(){
 
         //creating querry
         $query = "SELECT RequestID, EmployeeID, DateRequested, 
