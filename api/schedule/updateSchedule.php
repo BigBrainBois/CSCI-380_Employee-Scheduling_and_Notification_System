@@ -31,7 +31,7 @@ $schedule->EndTine = $data->EndTine;
 
   
 // update the product
-if($request->updateSchedule()){
+if($schedule->updateSchedule()){
   
     // set response code - 200 ok
     http_response_code(200);
