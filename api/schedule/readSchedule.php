@@ -30,7 +30,7 @@ if($num>0){
         extract($row);
 
         $schedule_item=array(
-            "ID" => $ID,
+            "ID" => $ScheduleID,
             "EmployeeID" => $EmployeeID,
             "Date" => $Date,
             "StartTime" => $StartTime,
@@ -48,7 +48,6 @@ if($num>0){
 
 
 }
-  
 else{
   
     // set response code - 404 Not found
@@ -56,7 +55,7 @@ else{
   
     // tell the user no categories found
     echo json_encode(
-        array("message" => "No request found.")
+        array("message" => "No Schedule found.")
     );
 }
 ?>

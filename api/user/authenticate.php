@@ -24,10 +24,12 @@ $data = json_decode(file_get_contents("php://input"));
 
 if(
     !empty($data->Username) &&
-    !empty($data->Password)
+    !empty($data->Password) &&
+    !empty($data->Rank)
 ){
     $user->Username = $data->Username;
     $user->Password = $data->Password;
+    $user->Rank = $data->Rank;
     
     //authenticating
     if($user->authenticate()){

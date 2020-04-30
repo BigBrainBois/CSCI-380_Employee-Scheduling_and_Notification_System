@@ -70,23 +70,28 @@ class User{
     function authenticate(){
         
         //creating querry
-        $query = "SELECT Password FROM " . $this->table_name . " WHERE Username = :Username";
+        $query = "SELECT Password FROM " . $this->table_name . " WHERE Username = :Username AND Rank = :Rank";
         
         $stmt= $this->conn->prepare($query);
 
         //cleaning inputs
         $this->Username = htmlspecialchars(strip_tags($this->Username));
         $this->Password = htmlspecialchars(strip_tags($this->Password));
+        $this->Rank = htmlspecialchars(strip_tags($this->Rank));
         
         //binding parameters
         $stmt->bindParam(":Username",$this->Username);
+        $stmt->bindParam(":Rank",$this->Rank);
 
         $stmt->execute();
-
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        //checking password against hash
-        return password_verify($this->Password,$row["Password"]);
+        if($stmt->rowCount() > 0){
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            //checking password against hash
+            return password_verify($this->Password,$row["Password"]);
+        }
+        else{
+            return false;
+        }
 
     }
     
