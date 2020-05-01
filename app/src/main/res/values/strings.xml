@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Employee_Scheduler</string>
+    <string name="app_name">Employee Scheduler</string>
     <string name="title_activity_login">Log In</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -46,6 +46,10 @@
     <string name="from">From:</string>
     <string name="schedule_requests">Schedule Requests</string>
     <string name="view_my_schedule">View My Schedule</string>
-    <string name="notifications">Notifications</string>
     <string name="change_availability">Change Availability</string>
+    <string name="view_breakdown">View Breakdown</string>
+    <string name="auto_schedule_employees">Auto-Schedule Employees</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+    <string name="view_requests">View Requests</string>
 </resources>

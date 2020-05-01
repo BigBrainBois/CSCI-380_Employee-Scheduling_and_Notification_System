@@ -1,6 +1,5 @@
 package com.nyit.employee_scheduler;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONObject;
 
@@ -16,27 +16,23 @@ import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class LoginActivity extends Activity {
+public class ManagerLoginActivity extends AppCompatActivity {
 
     private EditText username;
     private EditText password;
     private Button login;
     private Intent currentIntent;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_manager_login);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
         currentIntent = this.getIntent();
         configureLogin();
-
-
     }
-
 
     private void configureLogin(){
 
@@ -48,9 +44,8 @@ public class LoginActivity extends Activity {
         });
     }
 
-    private void displayErrorToast(){
 
-    }
+    private void displayErrorToast(){}
 
     private void sendLoginRequest(final String username, final String password){
         Thread thread = new Thread(new Runnable() {
@@ -68,7 +63,7 @@ public class LoginActivity extends Activity {
                     JSONObject jsonParam = new JSONObject();
                     jsonParam.put("Username", username );
                     jsonParam.put("Password", password);
-                    jsonParam.put("Rank",  currentIntent.getStringExtra("Rank"));
+                    jsonParam.put("Rank", currentIntent.getStringExtra("Rank"));
 
 
                     DataOutputStream os = new DataOutputStream(conn.getOutputStream());
@@ -78,16 +73,16 @@ public class LoginActivity extends Activity {
                     os.close();
 
                     if(String.valueOf(conn.getResponseCode()).equals("200")){
-                        Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
+                        Intent intent = new Intent(ManagerLoginActivity.this, ManagerDashboardActivity.class);
                         startActivity(intent);
                     }
                     else{
-                        LoginActivity.this.username.setText("");
-                        LoginActivity.this.password.setText("");
-                        LoginActivity.this.runOnUiThread(new Runnable() {
+                        ManagerLoginActivity.this.username.setText("");
+                        ManagerLoginActivity.this.password.setText("");
+                        ManagerLoginActivity.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(LoginActivity.this,"Invalid username or password",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ManagerLoginActivity.this,"Invalid username or password",Toast.LENGTH_SHORT).show();
                             }
                         });
 
@@ -101,21 +96,5 @@ public class LoginActivity extends Activity {
         });
 
         thread.start();
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
