@@ -59,6 +59,7 @@ class Schedule{
         return false;
 
     }
+
     // update the request
     function updateSchedule(){
   
@@ -68,10 +69,10 @@ class Schedule{
                 SET
                     Date =:Date,
                     EmployeeID =:EmployeeID,
-                    StartTime =:StartTime
+                    StartTime =:StartTime,
                     EndTime =:EndTime
                 WHERE
-                    ID =:ID";
+                    ScheduleID =:ID";
       
         // prepare query statement
         $stmt = $this->conn->prepare($query);

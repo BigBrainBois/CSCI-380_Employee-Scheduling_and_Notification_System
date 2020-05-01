@@ -26,8 +26,8 @@ $schedule->ID = $data->ID;
 // set product property values
 $schedule->EmployeeID = $data->EmployeeID;
 $schedule->Date = $data->Date;
-$schedule->StartTine = $data->StartTine;
-$schedule->EndTine = $data->EndTine;
+$schedule->StartTime = $data->StartTime;
+$schedule->EndTime = $data->EndTime;
 
   
 // update the product

@@ -8,6 +8,7 @@ class Employee{
     public $SickDaysRemaining;
     public $VacationDaysUsed;
     public $VacationDaysRemaining;
+    //public $SchedDate = "2020-05-01";
 
 
     public function __construct($db){
@@ -29,6 +30,7 @@ class Employee{
         return $stmt;
 
     }
+
 
     function createEmployee(){
         //creating insert querry
@@ -97,6 +99,30 @@ class Employee{
         }
       
         return false;
+    }
+    function checkAvailability($SchedDate){
+  
+        // select all query
+        $query = "SELECT*FROM " . $this->table_name . " WHERE EmployeeID
+       NOT IN (SELECT EmployeeID FROM Requests
+       WHERE EmployeeInfo.EmployeeID = Requests.EmployeeID 
+       AND DateRequested = ?
+       AND Status = 'approved')";
+      
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+      
+        // sanitize
+        $SchedDate=htmlspecialchars(strip_tags($SchedDate));
+        $SchedDate = "$SchedDate";
+      
+        // bind
+        $stmt->bindParam(1, $SchedDate);
+      
+        // execute query
+        $stmt->execute();
+      
+        return $stmt;
     }
 
 }
