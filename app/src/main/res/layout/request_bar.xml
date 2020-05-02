@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="100dp"
+    android:padding="10dp"
+    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/request"
+            android:text="Date"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message"
+            android:text="Message"
+            android:textSize="16dp"
+            android:layout_toRightOf="@id/request"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <Button
+            android:id="@+id/acceptButton"
+            android:textSize="12sp"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:background="@color/yellow"
+            android:text="@string/accept"
+            android:layout_toLeftOf="@id/declineButton"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            />
+
+        <Button
+            android:id="@+id/declineButton"
+            android:textSize="12dp"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:background="@color/yellow"
+            android:text="@string/decline"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+</RelativeLayout>
