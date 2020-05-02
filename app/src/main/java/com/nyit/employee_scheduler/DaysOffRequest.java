@@ -1,8 +1,10 @@
 package com.nyit.employee_scheduler;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,16 +20,19 @@ public class DaysOffRequest extends AppCompatActivity {
 
         private Button submitDaysOffButton;
         private TextView desiredDateInput;
+        private DatePickerDialog dateDialogue;
+        private Button selectOffButton;
+        private String date;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_daysoff_request);
             submitDaysOffButton = findViewById(R.id.submitDaysOffButton);
-            desiredDateInput = findViewById(R.id.desiredDateInput);
+            selectOffButton = findViewById(R.id.selectOffButton);
             configureRequests();
-
-
+            configureDateDialogue();
+            configureOffButton();
         }
         //Days Off Request is creating a request to add a specific time to have days off based on vacation time and current schedule of employee (and/or other employees)
         private void configureRequests(){
@@ -35,12 +40,21 @@ public class DaysOffRequest extends AppCompatActivity {
             submitDaysOffButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    daysOffRequest(desiredDateInput.getText().toString());
+                    daysOffRequest();
                 }
             });
         }
 
-        private void daysOffRequest(final String desiredDateInput) {
+        private void configureOffButton(){
+            selectOffButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dateDialogue.show();
+                }
+            });
+        }
+
+        private void daysOffRequest() {
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -54,7 +68,7 @@ public class DaysOffRequest extends AppCompatActivity {
                         conn.setDoInput(true);
 
                         JSONObject jsonParam = new JSONObject();
-                        jsonParam.put("DateRequested", "2020-05-02");
+                        jsonParam.put("DateRequested", date);
                         jsonParam.put("EmployeeID", "1234556");
                         jsonParam.put("Status", "unapproved");
                         jsonParam.put("RequestType","vacation");
@@ -89,6 +103,20 @@ public class DaysOffRequest extends AppCompatActivity {
 
             thread.start();
         }
+
+
+        private void configureDateDialogue() {
+            dateDialogue = new DatePickerDialog(this);
+            dateDialogue.setOnDateSetListener(new DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                    date = String.format("%d-%d-%d", year, month+1, dayOfMonth);
+                    selectOffButton.setText(date);
+                }
+            });
+
+    }
+
     }
 
 

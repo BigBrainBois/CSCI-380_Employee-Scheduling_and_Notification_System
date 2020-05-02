@@ -32,7 +32,7 @@ public class ViewSchedule extends AppCompatActivity {
 
     private TextView timeView;
     private TextView dayView;
-    private Button updateSchedule
+    private Button updateSchedule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,15 +45,15 @@ public class ViewSchedule extends AppCompatActivity {
     }
 
 
-    private void configureLogin(){
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendLoginRequest(username.getText().toString(),password.getText().toString());
-            }
-        });
-    }
+//    private void configureLogin(){
+//
+//        login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                sendLoginRequest(username.getText().toString(),password.getText().toString());
+//            }
+//        });
+//    }
 
     private void displayErrorToast(){
 
