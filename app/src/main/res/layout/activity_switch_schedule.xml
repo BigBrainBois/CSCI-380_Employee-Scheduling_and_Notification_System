@@ -55,19 +55,20 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp">
 
-            <EditText
+            <Button
+                android:id="@+id/fromButton"
                 android:ems="5"
                 android:gravity="center_horizontal"
                 android:text="@string/day"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
-            <EditText
+            <Button
+                android:id="@+id/fromTime"
                 android:layout_width="241dp"
+                android:text="Select Time"
                 android:ems="5"
                 android:gravity="center_horizontal"
-                android:inputType="time"
-                android:text="8:00am-4:00pm"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -84,12 +85,6 @@
                 android:text="@string/to"
                 android:textSize="18sp" />
 
-            <EditText
-                android:ems="5"
-                android:gravity="center_horizontal"
-                android:inputType="textPersonName"
-                android:text="Employee Name"
-                android:textAlignment="center" />
         </TableRow>
 
 
@@ -100,19 +95,20 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp">
 
-            <EditText
+            <Button
+                android:id="@+id/toButton"
                 android:ems="5"
                 android:gravity="center_horizontal"
                 android:text="@string/day"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
-            <EditText
+            <Button
+                android:id="@+id/toTime"
+                android:text="Select Time"
                 android:layout_width="241dp"
                 android:ems="5"
                 android:gravity="center_horizontal"
-                android:inputType="time"
-                android:text="8:00am-4:00pm"
                 android:textAlignment="center" />
         </TableRow>
 
