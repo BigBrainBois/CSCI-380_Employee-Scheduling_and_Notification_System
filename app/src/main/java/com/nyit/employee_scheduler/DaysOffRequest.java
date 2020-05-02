@@ -19,7 +19,6 @@ import java.net.URL;
 public class DaysOffRequest extends AppCompatActivity {
 
         private Button submitDaysOffButton;
-        private TextView desiredDateInput;
         private DatePickerDialog dateDialogue;
         private Button selectOffButton;
         private String date;
@@ -115,7 +114,7 @@ public class DaysOffRequest extends AppCompatActivity {
                 }
             });
 
-    }
+        }
 
     }
 
