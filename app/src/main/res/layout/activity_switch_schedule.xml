@@ -24,110 +24,107 @@
         android:id="@+id/scheduleIcon"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="6dp"
         android:contentDescription="@string/icon"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
-        app:layout_constraintStart_toEndOf="@+id/daysofftext"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438"
-        app:srcCompat="@drawable/switchsched" />
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="363dp"
-        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toEndOf="@+id/daysofftext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/switchsched" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/switching_from"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysofftext" />
+
+
+    <Button
+        android:id="@+id/dateButton1"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="88dp"
+        android:background="@color/lightblue"
+        android:text="@string/day"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateButton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/daysofftext"
-        app:layout_constraintVertical_bias="0.137">
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="DuplicateIds" />
 
-        <TextView
-            android:text="@string/switching_from"
-            android:textSize="18sp" />
+    <Button
+        android:id="@+id/timeButton1"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:background="@color/blue"
+        android:text="@string/select_time"
+        app:layout_constraintBottom_toTopOf="@+id/timeButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/dateButton1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.635"
+        tools:ignore="DuplicateIds" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
+    <Button
+        android:id="@+id/timeButton2"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="420dp"
+        android:background="@color/blue"
+        android:text="@string/select_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/dateButton2"
+        tools:ignore="DuplicateIds" />
 
-            <Button
-                android:id="@+id/dateButton"
-                android:ems="5"
-                android:gravity="center_horizontal"
-                android:text="@string/day"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                tools:ignore="DuplicateIds" />
+    <Button
+        android:id="@+id/dateButton2"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="420dp"
+        android:text="@string/day"
+        android:background="@color/lightblue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds" />
 
-            <Button
-                android:id="@+id/timeButton"
-                android:layout_width="241dp"
-                android:text="@string/select_time"
-                android:ems="5"
-                android:gravity="center_horizontal"
-                android:textAlignment="center"
-                tools:ignore="DuplicateIds" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:layout_width="57dp"
-                android:layout_height="wrap_content"
-                android:text="@string/to"
-                android:textSize="18sp" />
-
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <Button
-                android:id="@+id/dateButton"
-                android:ems="5"
-                android:gravity="center_horizontal"
-                android:text="@string/day"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                tools:ignore="DuplicateIds" />
-
-            <Button
-                android:id="@+id/timeButton"
-                android:text="@string/select_time"
-                android:layout_width="241dp"
-                android:ems="5"
-                android:gravity="center_horizontal"
-                android:textAlignment="center"
-                tools:ignore="DuplicateIds" />
-        </TableRow>
-
-    </TableLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/to"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateButton1" />
 
     <Button
         android:id="@+id/submitDaysOffButton"
         android:layout_width="101dp"
         android:layout_height="57dp"
+        android:layout_marginBottom="296dp"
         android:background="@color/yellow"
         android:text="@string/submit"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
