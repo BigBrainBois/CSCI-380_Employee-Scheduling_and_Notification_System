@@ -20,7 +20,6 @@ $data = json_decode(file_get_contents("php://input"));
 
 //checking if input is empty
 if(
-   !empty($data->RequestID) &&
    !empty($data->EmployeeID) &&
    !empty($data->DateRequested) &&
    !empty($data->Status) &&
@@ -28,7 +27,6 @@ if(
    !empty($data->Message)
 ){
     //setting user attributes
-    $request->RequestID = $data->RequestID;
     $request->EmployeeID = $data->EmployeeID;
     $request->DateRequested = $data->DateRequested;
     $request->Status = $data->Status;

@@ -8,7 +8,7 @@ class Employee{
     public $SickDaysRemaining;
     public $VacationDaysUsed;
     public $VacationDaysRemaining;
-    //public $SchedDate = "2020-05-01";
+  
 
 
     public function __construct($db){
@@ -30,6 +30,8 @@ class Employee{
         return $stmt;
 
     }
+
+   
 
 
     function createEmployee(){
@@ -124,6 +126,8 @@ class Employee{
       
         return $stmt;
     }
+
+    
 
 }
 ?>

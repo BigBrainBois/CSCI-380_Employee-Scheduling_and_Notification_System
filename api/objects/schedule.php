@@ -31,6 +31,27 @@ class Schedule{
 
     }
 
+    function readMySchedule($EmployeeID){
+        $query = "SELECT Date, ScheduleID,
+        StartTime, EndTime
+        FROM " . $this->table_name . " 
+        WHERE EmployeeID = ?
+        ORDER BY Date";
+
+        //preparing querry
+        $stmt = $this->conn->prepare($query);
+
+        $EmployeeID=htmlspecialchars(strip_tags($EmployeeID));
+        $EmployeeID = "$EmployeeID";
+      
+        // bind
+        $stmt->bindParam(1, $EmployeeID);
+
+        //executing querry
+        $stmt->execute();
+        return $stmt;
+    }
+
     function createSchedule(){
         //creating insert querry
         $query = "INSERT INTO " . $this->table_name . "

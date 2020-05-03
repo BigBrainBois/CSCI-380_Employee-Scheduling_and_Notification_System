@@ -20,7 +20,8 @@ class Request{
         //creating querry
         $query = "SELECT RequestID, EmployeeID, DateRequested, 
         Status, RequestType, Message
-        FROM " . $this->table_name . "";
+        FROM " . $this->table_name . "
+        ORDER BY DateRequested";
 
         //preparing querry
         $stmt = $this->conn->prepare($query);
@@ -31,17 +32,17 @@ class Request{
 
     }
 
+
     function createRequest(){
         //creating insert querry
         $query = "INSERT INTO " . $this->table_name . "
-        SET RequestID =:RequestID, EmployeeID =:EmployeeID, DateRequested =:DateRequested, 
+        SET EmployeeID =:EmployeeID, DateRequested =:DateRequested, 
         Status =:Status, RequestType =:RequestType, Message =:Message";
 
         //preparing querry
         $stmt = $this->conn->prepare($query);
 
         //cleaning data
-        $this->RequestID = htmlspecialchars(strip_tags($this->RequestID));
         $this->EmployeeID = htmlspecialchars(strip_tags($this->EmployeeID));
         $this->DateRequested = htmlspecialchars(strip_tags($this->DateRequested));
         $this->Status = htmlspecialchars(strip_tags($this->Status));
@@ -49,7 +50,6 @@ class Request{
         $this->Message = htmlspecialchars(strip_tags($this->Message));
 
         //binding data to querry
-        $stmt->bindParam(":RequestID",$this->RequestID);
         $stmt->bindParam(":EmployeeID",$this->EmployeeID);
         $stmt->bindParam(":DateRequested",$this->DateRequested);
         $stmt->bindParam(":Status",$this->Status);
