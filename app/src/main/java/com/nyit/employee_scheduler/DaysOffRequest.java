@@ -71,8 +71,7 @@ public class DaysOffRequest extends AppCompatActivity {
                         jsonParam.put("EmployeeID", "1234556");
                         jsonParam.put("Status", "unapproved");
                         jsonParam.put("RequestType","vacation");
-                        jsonParam.put("Message","hello!");
-                        jsonParam.put("RequestID","12345");
+                        jsonParam.put("Message","vacation request");
 
 
                         DataOutputStream os = new DataOutputStream(conn.getOutputStream());
