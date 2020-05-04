@@ -38,10 +38,12 @@ if(
 
         //generating jwt token
         $jwt = $auth->generateToken($data->Username);
+        $EmployeeID =$user->getEmployeeID();
 
         echo json_encode(array(
             "message"=> "Sign-in was successfull!",
-            "jwt" => $jwt
+            "jwt" => $jwt,
+            "EmployeeID" => $EmployeeID
         ));
     }
     else{
