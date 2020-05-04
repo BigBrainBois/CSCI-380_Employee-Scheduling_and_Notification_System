@@ -91,6 +91,7 @@ public class ManagerLoginActivity extends AppCompatActivity {
                         AuthResponse response = new Gson().fromJson(sb.toString(), AuthResponse.class);
 
                         Intent intent = new Intent(ManagerLoginActivity.this, ManagerDashboardActivity.class);
+                        //adding items to navigation parameters
                         intent.putExtra("EmployeeID",response.getEmployeeID());
                         intent.putExtra("UserName",username);
                         startActivity(intent);
