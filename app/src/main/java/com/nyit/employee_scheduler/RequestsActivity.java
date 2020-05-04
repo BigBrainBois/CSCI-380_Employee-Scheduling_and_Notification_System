@@ -20,20 +20,20 @@ public class RequestsActivity extends AppCompatActivity {
         changeSchedule = findViewById(R.id.changeSchedule);
         switchSchedule = findViewById(R.id.switchSchedule);
         daysOff = findViewById(R.id.daysOff);
-//        configureChanges();
+        configureChanges();
         configureSwitches();
         configureDaysOff();
     }
 
-//    private void configureChanges(){
-//        changeSchedule.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(RequestsActivity.this, ChangeAvailability.class);
-//                startActivity(intent);
-//            }
-//        });
-//    }
+    private void configureChanges(){
+        changeSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RequestsActivity.this, ChangeAvailability.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     private void configureSwitches(){
         switchSchedule.setOnClickListener(new View.OnClickListener() {
