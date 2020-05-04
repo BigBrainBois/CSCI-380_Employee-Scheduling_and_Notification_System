@@ -59,7 +59,7 @@ public class LoginActivity extends Activity {
                 try {
                     URL url = new URL("http://64.190.90.187/api/user/authenticate.php");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                    conn.setRequestMethod("POST");
+                    conn.setRequestMethod("GET");
                     conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
                     conn.setRequestProperty("Accept","application/json");
                     conn.setDoOutput(true);

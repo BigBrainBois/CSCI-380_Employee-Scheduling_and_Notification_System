@@ -2,6 +2,7 @@ package com.nyit.employee_scheduler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +40,7 @@ public class DashboardActivity extends AppCompatActivity {
         notificationCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, Notification.class);
+                Intent intent = new Intent(DashboardActivity.this, NotificationActivity.class);
                 startActivity(intent);
             }
         });

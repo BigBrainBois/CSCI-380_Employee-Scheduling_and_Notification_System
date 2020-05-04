@@ -35,8 +35,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="363dp"
-        android:layout_height="606dp"
+        android:layout_width="367dp"
+        android:layout_height="493dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,10 +48,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:gravity="center_horizontal"
+            android:padding="10dp"
             android:text="@string/week_1"
             android:textAlignment="center"
-            android:textSize="20sp"
-            android:padding="10dp"/>
+            android:textSize="20sp" />
 
         <TableRow
             android:id="@+id/Bar"
@@ -63,14 +63,15 @@
             <TextView
                 android:id="@+id/days"
                 android:text="@string/day_of_the_week"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:text="Day" />
 
             <TextView
                 android:id="@+id/timeText"
-                android:layout_marginLeft="132dp"
                 android:layout_marginStart="132dp"
-                android:text="@string/time_scheduled"
-                android:textSize="16sp" />
+                android:layout_marginLeft="132dp"
+                android:textSize="16sp"
+                tools:text="Time" />
         </TableRow>
 
         <TableRow
@@ -82,133 +83,29 @@
             android:paddingBottom="5dp">
 
             <TextView
-                android:id="@+id/sun"
-                android:text="@string/sunday"
+                android:id="@+id/dayView"
+                android:layout_width="79dp"
                 android:textSize="16sp" />
 
             <TextView
-                android:text="8:00am-4:00pm"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
+                android:id="@+id/timeView"
+                android:layout_width="343dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center" />
         </TableRow>
 
 
-        <TableRow
-            android:id="@+id/Monday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/mon"
-                android:text="@string/monday"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="8:00am-4:00pm"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/Tuesday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/tues"
-                android:text="@string/tuesday"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="8:00am-4:00pm"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-        </TableRow>
-
-
-        <TableRow
-            android:id="@+id/Wednesday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/wed"
-                android:text="@string/wednesday"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="8:00am-4:00pm"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-        </TableRow>
-
-
-        <TableRow
-            android:id="@+id/Thursday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/thurs"
-                android:text="@string/thursday"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="8:00am-4:00pm"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-        </TableRow>
-
-
-        <TableRow
-            android:id="@+id/Friday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/fri"
-                android:text="@string/friday"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="8:00am-4:00pm"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-        </TableRow>
-
-
-        <TableRow
-            android:id="@+id/Saturday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/sat"
-                android:text="@string/saturday"
-                android:textSize="16sp" />
-
-            <TextView
-                android:text="8:00am-4:00pm"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
-        </TableRow>
     </TableLayout>
+
+    <Button
+        android:id="@+id/updateSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.263" />
 </androidx.constraintlayout.widget.ConstraintLayout>

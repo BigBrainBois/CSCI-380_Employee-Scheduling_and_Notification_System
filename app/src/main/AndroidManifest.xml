@@ -16,11 +16,11 @@
         <activity android:name=".ViewBreakdown" />
         <activity android:name=".ManagerDashboardActivity" />
         <activity android:name=".ManagerLoginActivity" />
-        <activity android:name=".DaysoffRequest" />
         <activity android:name=".SwitchSchedule" />
-        <activity android:name=".ChangeSchedule" />
+        <activity android:name=".ChangeAvailability" />
+        <activity android:name=".DaysOffRequest" />
         <activity android:name=".RequestsActivity" />
-        <activity android:name=".Notification" />
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".ViewSchedule" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".LoginActivity" />
