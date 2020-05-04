@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ManagerDashboardActivity extends AppCompatActivity {
 
     private Button breakdownCard;
     private Button requestsCard;
+    private TextView userNameText;
 
 
     @Override
@@ -19,6 +21,8 @@ public class ManagerDashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manager_dashboard);
         breakdownCard = findViewById(R.id.breakdownCard);
         requestsCard = findViewById(R.id.requestsCard);
+        userNameText = findViewById(R.id.username);
+        userNameText.setText(getIntent().getStringExtra("UserName"));
         configureBreakdown();
         configureRequests();
     }

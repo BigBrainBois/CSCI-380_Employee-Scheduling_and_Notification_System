@@ -10,9 +10,13 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -73,7 +77,22 @@ public class ManagerLoginActivity extends AppCompatActivity {
                     os.close();
 
                     if(String.valueOf(conn.getResponseCode()).equals("200")){
+
+                        //getting content from message
+                        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                        StringBuilder sb = new StringBuilder();
+                        String line;
+                        while ((line = br.readLine()) != null) {
+                            sb.append(line+"\n");
+                        }
+                        br.close();
+
+                        //creating json object
+                        AuthResponse response = new Gson().fromJson(sb.toString(), AuthResponse.class);
+
                         Intent intent = new Intent(ManagerLoginActivity.this, ManagerDashboardActivity.class);
+                        intent.putExtra("EmployeeID",response.getEmployeeID());
+                        intent.putExtra("UserName",username);
                         startActivity(intent);
                     }
                     else{

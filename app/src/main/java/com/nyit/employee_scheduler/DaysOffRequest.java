@@ -68,7 +68,7 @@ public class DaysOffRequest extends AppCompatActivity {
 
                         JSONObject jsonParam = new JSONObject();
                         jsonParam.put("DateRequested", date);
-                        jsonParam.put("EmployeeID", "1234556");
+                        jsonParam.put("EmployeeID", Integer.toString(getIntent().getIntExtra("EmployeeID",-1)));
                         jsonParam.put("Status", "unapproved");
                         jsonParam.put("RequestType","vacation");
                         jsonParam.put("Message","vacation request");
@@ -87,6 +87,7 @@ public class DaysOffRequest extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     Toast.makeText(DaysOffRequest.this, "Request was not submitted, please try again. ", Toast.LENGTH_SHORT).show();
+                                    System.out.println(getIntent().getIntExtra("EmployeeID",-1));
                                 }
                             });
 

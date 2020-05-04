@@ -7,12 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class DashboardActivity extends AppCompatActivity {
 
     private Button scheduleCard;
     private Button notificationCard;
     private Button requestCard;
+    private TextView userNameText;
 
 
     @Override
@@ -22,6 +24,8 @@ public class DashboardActivity extends AppCompatActivity {
         scheduleCard = findViewById(R.id.scheduleCard);
         notificationCard = findViewById(R.id.notificationCard);
         requestCard = findViewById(R.id.requestCard);
+        userNameText = findViewById(R.id.username);
+        userNameText.setText(getIntent().getStringExtra("UserName"));
         configureSchedule();
         configureNotifications();
         configureRequests();
@@ -51,6 +55,8 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashboardActivity.this, RequestsActivity.class);
+                intent.putExtra("UserName",getIntent().getStringExtra("UserName"));
+                intent.putExtra("EmployeeID",getIntent().getIntExtra("EmployeeID",-1));
                 startActivity(intent);
             }
         });
