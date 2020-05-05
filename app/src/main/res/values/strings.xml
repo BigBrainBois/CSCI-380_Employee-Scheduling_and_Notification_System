@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Employee Scheduler</string>
+    <string name="app_name">Skedulr</string>
     <string name="title_activity_login">Log In</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
