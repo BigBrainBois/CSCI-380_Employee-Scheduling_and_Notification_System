@@ -17,8 +17,8 @@
         <activity android:name=".ManagerDashboardActivity" />
         <activity android:name=".ManagerLoginActivity" />
         <activity android:name=".SwitchSchedule" />
-        <activity android:name=".ChangeAvailability" />
         <activity android:name=".DaysOffRequest" />
+        <activity android:name=".ChangeAvailability"/>
         <activity android:name=".RequestsActivity" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".ViewSchedule" />

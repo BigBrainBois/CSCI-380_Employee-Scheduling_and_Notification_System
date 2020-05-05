@@ -1,112 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewSchedule">
 
-    <TextView
-        android:id="@+id/daysofftext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/my_schedule"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view"
+        android:divider="@color/blue"
+        android:dividerHeight="0.5dp" />
 
 
-    <ImageView
-        android:id="@+id/scheduleIcon"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
-        app:layout_constraintStart_toEndOf="@+id/daysofftext"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/scheduleview"
-        android:contentDescription="@string/icon" />
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="367dp"
-        android:layout_height="493dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/daysofftext"
-        app:layout_constraintVertical_bias="0.157">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="@string/week_1"
-            android:textAlignment="center"
-            android:textSize="20sp" />
-
-        <TableRow
-            android:id="@+id/Bar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5dp"
-            android:paddingBottom="10dp">
-
-            <TextView
-                android:id="@+id/days"
-                android:text="@string/day_of_the_week"
-                android:textSize="16sp"
-                tools:text="Day" />
-
-            <TextView
-                android:id="@+id/timeText"
-                android:layout_marginStart="132dp"
-                android:layout_marginLeft="132dp"
-                android:textSize="16sp"
-                tools:text="Time" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/Sunday"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/dayView"
-                android:layout_width="79dp"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/timeView"
-                android:layout_width="343dp"
-                android:gravity="center_horizontal"
-                android:textAlignment="center" />
-        </TableRow>
 
 
-    </TableLayout>
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/updateSchedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="update"
-        android:background="@color/yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="0.263" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
