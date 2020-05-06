@@ -35,6 +35,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashboardActivity.this, ViewSchedule.class);
+                intent.putExtra("EmployeeID",getIntent().getIntExtra("EmployeeID",-1));
                 startActivity(intent);
             }
         });

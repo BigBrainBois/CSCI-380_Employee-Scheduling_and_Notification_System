@@ -24,6 +24,7 @@
         <activity android:name=".ViewSchedule" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".CreateSchedule"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

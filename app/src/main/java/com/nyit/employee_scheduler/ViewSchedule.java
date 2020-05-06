@@ -49,7 +49,8 @@ public class ViewSchedule extends AppCompatActivity {
                 @Override
                 public void run() {
                     try {
-                        URL url = new URL("http://64.190.90.187/api/schedule/readMySchedule.php?id=8193764");
+
+                        URL url = new URL("http://64.190.90.187/api/schedule/readMySchedule.php?id="+getIntent().getIntExtra("EmployeeID",-1));
                         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                         conn.setRequestMethod("GET");
                         conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
