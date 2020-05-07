@@ -67,6 +67,25 @@ class User{
 
     }
 
+    function getEmployeeID(){
+        $query = "SELECT EmployeeID FROM " . $this->table_name . " WHERE Username = :Username";
+        $stmt= $this->conn->prepare($query);
+        
+        $this->Username = htmlspecialchars(strip_tags($this->Username));
+
+        $stmt->bindParam(":Username",$this->Username);
+
+        $stmt->execute();
+        if($stmt->rowCount() > 0){
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $row["EmployeeID"];
+        }
+        else{
+            return null;
+        }
+
+    }
+
     function authenticate(){
         
         //creating querry
@@ -94,6 +113,8 @@ class User{
         }
 
     }
+
+
     
 }
 ?>
