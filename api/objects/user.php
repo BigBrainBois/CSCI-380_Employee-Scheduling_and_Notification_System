@@ -114,6 +114,40 @@ class User{
 
     }
 
+    function resetPassword(){
+          //creating insert querry
+          $query = "UPDATE
+          " . $this->table_name . "
+          SET  Password=:Password, EmployeeID=:EmployeeID, Rank=:Rank
+          WHERE Username=:Username";
+  
+          //preparing querry
+          $stmt = $this->conn->prepare($query);
+  
+          //cleaning data
+          
+          $this->Password = htmlspecialchars(strip_tags($this->Password));
+          $this->EmployeeID = htmlspecialchars(strip_tags($this->EmployeeID));
+          $this->Rank = htmlspecialchars(strip_tags($this->Rank));
+          $this->Username = htmlspecialchars(strip_tags($this->Username));
+  
+          //hashing password
+          $this->Password = password_hash($this->Password,PASSWORD_DEFAULT);
+  
+          //binding data to querry
+          
+          $stmt->bindParam(":Password",$this->Password);
+          $stmt->bindParam(":EmployeeID",$this->EmployeeID);
+          $stmt->bindParam(":Rank",$this->Rank);
+          $stmt->bindParam(":Username",$this->Username);
+  
+         if($stmt->execute()){
+            return true;
+        }
+        
+        return false;
+    }
+
 
     
 }
