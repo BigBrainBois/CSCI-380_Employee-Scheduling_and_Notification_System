@@ -17,7 +17,7 @@ $employee = new Employee($db);
   
 // get keywords
 $SchedDate=isset($_GET["date"]) ? $_GET["date"] : "";
-  
+
 // query employees
 $stmt = $employee->checkAvailability($SchedDate);
 $num = $stmt->rowCount();
@@ -37,11 +37,7 @@ if($num>0){
         extract($row);
   
         $employee_item=array(
-            "EmployeeID" => $EmployeeID,
-            "SickDaysUsed" => $SickDaysUsed,
-            "SickDaysRemaining" => $SickDaysRemaining,
-            "VacationDaysUsed" => $VacationDaysUsed,
-            "VacationDaysRemaining" => $VacationDaysRemaining
+            "EmployeeID" => $EmployeeID
         );
   
         array_push($employee_arr["available"], $employee_item);

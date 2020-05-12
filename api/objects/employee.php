@@ -105,7 +105,7 @@ class Employee{
     function checkAvailability($SchedDate){
   
         // select all query
-        $query = "SELECT*FROM " . $this->table_name . " WHERE EmployeeID
+        $query = "SELECT EmployeeID FROM " . $this->table_name . " WHERE EmployeeID
        NOT IN (SELECT EmployeeID FROM Requests
        WHERE EmployeeInfo.EmployeeID = Requests.EmployeeID 
        AND DateRequested = ?
