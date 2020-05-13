@@ -26,14 +26,14 @@
         android:id="@+id/imageView"
         android:layout_width="148dp"
         android:layout_height="128dp"
+        android:contentDescription="@string/icon"
         app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.746"
-        app:srcCompat="@drawable/employee_icon"
-        android:contentDescription="@string/icon" />
+        app:srcCompat="@drawable/employee_icon" />
 
     <EditText
         android:id="@+id/password"
@@ -92,6 +92,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.062" />
+
+    <Button
+        android:id="@+id/resetPassword"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:background="@color/yellow"
+        android:text="@string/forgotpass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.078" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,7 @@ public class ManagerDashboardActivity extends AppCompatActivity {
     private TextView userNameText;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,10 +61,10 @@ public class ManagerDashboardActivity extends AppCompatActivity {
         });
     }
 
+    }
 
 
 
 
 
 
-}

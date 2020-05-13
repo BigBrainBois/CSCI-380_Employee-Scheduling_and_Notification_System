@@ -25,6 +25,7 @@ public class ManagerLoginActivity extends AppCompatActivity {
     private EditText username;
     private EditText password;
     private Button login;
+    private Button resetPassword;
     private Intent currentIntent;
 
     @Override
@@ -34,8 +35,10 @@ public class ManagerLoginActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
+        resetPassword = findViewById(R.id.resetPassword);
         currentIntent = this.getIntent();
         configureLogin();
+        configureResetPassword();
     }
 
     private void configureLogin(){
@@ -48,6 +51,15 @@ public class ManagerLoginActivity extends AppCompatActivity {
         });
     }
 
+    private void configureResetPassword(){
+        resetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ManagerLoginActivity.this, ResetPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     private void displayErrorToast(){}
 

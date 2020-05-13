@@ -34,7 +34,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="55dp"
                 android:text="@string/user123"
                 android:textSize="16sp" />
@@ -44,7 +43,6 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="325dp"
-                android:layout_marginLeft="325dp"
                 android:layout_marginTop="25dp"
                 android:contentDescription="@string/icon"
                 app:srcCompat="@drawable/manager_icon" />
@@ -75,7 +73,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/view_breakdown"
                     android:layout_marginTop="155dp"
-                    android:layout_marginLeft="49dp"
                     android:layout_marginStart="49dp" />
             </RelativeLayout>
 
@@ -118,7 +115,6 @@
                     android:layout_width="110dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="49dp"
-                    android:layout_marginLeft="49dp"
                     android:layout_marginTop="155dp"
                     android:text="@string/auto_schedule_employees"
                     android:textAlignment="center" />
@@ -140,12 +136,10 @@
                     android:layout_width="110dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="49dp"
-                    android:layout_marginLeft="49dp"
                     android:layout_marginTop="155dp"
                     android:text="Schedule"
                     android:textAlignment="center" />
             </RelativeLayout>
-
         </androidx.gridlayout.widget.GridLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

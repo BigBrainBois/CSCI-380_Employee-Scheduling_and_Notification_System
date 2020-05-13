@@ -25,6 +25,7 @@ public class LoginActivity extends Activity {
     private EditText username;
     private EditText password;
     private Button login;
+    private Button resetPassword;
     private Intent currentIntent;
 
 
@@ -35,8 +36,10 @@ public class LoginActivity extends Activity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
+        resetPassword = findViewById(R.id.resetPassword);
         currentIntent = this.getIntent();
         configureLogin();
+        configureResetPassword();
 
 
     }
@@ -48,6 +51,15 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View v) {
                 sendLoginRequest(username.getText().toString(),password.getText().toString());
+            }
+        });
+    }
+    private void configureResetPassword(){
+        resetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
+                startActivity(intent);
             }
         });
     }

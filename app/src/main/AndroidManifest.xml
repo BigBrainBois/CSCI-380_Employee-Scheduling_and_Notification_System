@@ -12,19 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ViewRequest"></activity>
+        <activity android:name=".ResetPasswordActivity"></activity>
+        <activity android:name=".ViewRequest" />
         <activity android:name=".ViewBreakdown" />
         <activity android:name=".ManagerDashboardActivity" />
         <activity android:name=".ManagerLoginActivity" />
         <activity android:name=".SwitchSchedule" />
         <activity android:name=".DaysOffRequest" />
-        <activity android:name=".ChangeAvailability"/>
+        <activity android:name=".ChangeAvailability" />
         <activity android:name=".RequestsActivity" />
         <activity android:name=".NotificationActivity" />
         <activity android:name=".ViewSchedule" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".CreateSchedule"/>
+        <activity android:name=".CreateSchedule" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

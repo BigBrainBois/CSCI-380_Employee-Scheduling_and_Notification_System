@@ -55,4 +55,6 @@
     <string name="select_day_off">Select Day Off</string>
     <string name="select_time">Select Time</string>
     <string name="breakdown">Breakdown</string>
+    <string name="resetpass">Reset Employee Password</string>
+    <string name="forgotpass">Forgot Your Password?</string>
 </resources>
