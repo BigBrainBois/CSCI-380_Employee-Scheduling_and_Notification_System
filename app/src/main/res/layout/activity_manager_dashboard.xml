@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagerDashboardActivity">
+
+    <LinearLayout
+        android:id="@+id/dashLLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/dashRLayout"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@drawable/background">
+
+            <TextView
+                android:id="@+id/dashText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:text="@string/my_dashboard"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="55dp"
+                android:text="@string/user123"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/loginicon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="325dp"
+                android:layout_marginTop="25dp"
+                android:contentDescription="@string/icon"
+                app:srcCompat="@drawable/manager_icon" />
+        </RelativeLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:columnCount="2"
+            app:rowCount="2">
+
+
+            <!--View Breakdown Card-->
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <Button
+                    android:id="@+id/breakdownCard"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:background="@drawable/breakdown"
+                    android:contentDescription="@string/icon" >
+                </Button>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_breakdown"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginStart="49dp" />
+            </RelativeLayout>
+
+
+            <!--Accepting/Declining Requests Card-->
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <Button
+                    android:id="@+id/requestsCard"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:background="@drawable/viewrequest"
+                    android:contentDescription="@string/icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Requests"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginStart="55dp" />
+            </RelativeLayout>
+
+
+            <!--Auto Schedule Card-->
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <Button
+                    android:id="@+id/autoscheduleCard"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:background="@drawable/autoschedule"
+                    android:contentDescription="@string/icon" >
+                </Button>
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="49dp"
+                    android:layout_marginTop="155dp"
+                    android:text="@string/auto_schedule_employees"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="205dp"
+                android:layout_height="205dp">
+                <Button
+                    android:id="@+id/ScheduleCard"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_margin="49dp"
+                    android:background="@drawable/autoschedule"
+                    android:contentDescription="@string/icon" >
+                </Button>
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="49dp"
+                    android:layout_marginTop="155dp"
+                    android:text="Schedule"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+        </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

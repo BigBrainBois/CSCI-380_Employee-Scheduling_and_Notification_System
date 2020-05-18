@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_centerVertical="true"
+        android:id="@+id/employeeID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Employee ID"
+        android:textSize="25dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/employeeID"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonContainer"
+        android:layout_marginVertical="20dp"
+        >
+
+        <Button
+            android:id="@+id/createScheduleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Date"
+
+            android:layout_marginHorizontal="10dp"
+            />
+        <Button
+            android:id="@+id/createScheduleStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Start Time"
+            android:layout_toRightOf="@id/createScheduleDate"
+
+            android:layout_marginHorizontal="10dp"
+            />
+        <Button
+            android:id="@+id/createScheduleEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="End Time"
+            android:layout_toRightOf="@id/createScheduleStartTime"
+
+            android:layout_marginHorizontal="10dp"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/submitSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="submit"
+        android:layout_below="@id/buttonContainer"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SwitchSchedule">
+
+
+    <TextView
+        android:id="@+id/daysofftext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/switch_schedules"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/scheduleIcon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toEndOf="@+id/daysofftext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/switchsched" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/switching_from"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysofftext" />
+
+
+    <Button
+        android:id="@+id/dateButton1"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="88dp"
+        android:background="@color/lightblue"
+        android:text="@string/day"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysofftext"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/timeButton1"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:background="@color/blue"
+        android:text="@string/select_time"
+        app:layout_constraintBottom_toTopOf="@+id/timeButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/dateButton1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.635"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/timeButton2"
+        android:layout_width="149dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="420dp"
+        android:background="@color/blue"
+        android:text="@string/select_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/dateButton2"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/dateButton2"
+        android:layout_width="97dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="420dp"
+        android:text="@string/day"
+        android:background="@color/lightblue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/to"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateButton1" />
+
+    <Button
+        android:id="@+id/submitDaysOffButton"
+        android:layout_width="101dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="296dp"
+        android:background="@color/yellow"
+        android:text="@string/submit"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
